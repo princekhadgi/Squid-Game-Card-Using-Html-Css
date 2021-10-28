@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+ body{
+     background: #333;
+ }
+
+ #sg {
+     width: 100%;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .container {
+     position: relative;
+     width: 100%;
+     height: 99.9vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     background: #333;
+ }
+
+ .container::before {
+     content: '';
+     position: absolute;
+     height: 100%;
+     background:
+     repeating-linear-gradient(90deg, #fff1 0px,#fff1 1px, transparent 1px,transparent 10px),
+     repeating-linear-gradient(0deg, #fff1 0px,#fff1 1px, transparent 1px,transparent 10px);
+     background-size: 10px;
+ }
+
+ .container .box ion-icon{
+     font-size: 11vw;
+     padding-top: 3vw;
+     transition: 0.5s ease-in-out;
+ }
+
+ .container .box ion-icon:hover {
+     font-size: 13vw;
+     color: #fff;
+     filter:
+     drop-shadow(0 0 5px #ea4884)
+     drop-shadow(0 0 10px #ea4884)
+     drop-shadow(0 0 20px #ea4884)
+     drop-shadow(0 0 40px #ea4884)
+     drop-shadow(0 0 60px #ea4884);
+ }
+
+ .box {
+     width: 266px;
+     height: 340px;
+     background-color: #fff;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     border-radius: 10px;
+     margin: 20px;
+     position: relative;
+ }
+
+ .box:hover{
+     transform: scale(1.01);
+     transition: all ease 0.1s;
+     background:
+     repeating-linear-gradient(90deg, #fff1 0px,#fff1 1px, transparent 1px,transparent 10px),
+     repeating-linear-gradient(0deg, #fff1 0px,#fff1 1px, transparent 1px,transparent 10px);
+     border: 1px solid #fff;
+
+ }
+
+.top-bar {
+    width: 50%;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+
+}
+
+@media screen and (max-width:1024px){
+    .container .box ion-icon {
+        font-size: 18vw;
+    }
+
+    .container .box ion-icon:hover {
+        font-size: 25vw;
+    }
+}
+@media screen and (max-width:768px){
+    .container .box ion-icon {
+        font-size: 20vw;
+    }
+
+    .container .box ion-icon:hover {
+        font-size: 30vw;
+    }
+}
+@media screen and (max-width:612px){
+    .container .box ion-icon {
+        font-size: 30vw;
+    }
+
+    .container .box ion-icon:hover {
+        font-size: 40vw;
+    }
+}
